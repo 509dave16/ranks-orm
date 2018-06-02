@@ -1,0 +1,6 @@
+.idea/
+lib/
+lib-esm/
+_bundles/
+node_modules/
+.DS_Store

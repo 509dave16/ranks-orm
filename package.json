@@ -1,0 +1,44 @@
+{
+  "name": "ranksdb",
+  "version": "0.0.3",
+  "description": "ORM wrapper for relational-pouch.",
+  "main": "lib/index.js",
+  "types": "lib/**/*.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -rf _bundles lib lib-esm",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+  },
+  "keywords": [
+    "pouchdb",
+    "orm",
+    "relational",
+    "pouch"
+  ],
+  "author": "David Fall",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/509dave16/rankdb"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.109",
+    "@types/pouchdb": "^6.3.2",
+    "fast-clone": "^1.5.3",
+    "fast-deep-equal": "^2.0.1",
+    "lodash": "^4.17.10",
+    "tcomb": "^3.2.27"
+  },
+  "peerDependencies": {
+    "pouchdb-find": "^6.4.3",
+    "relational-pouch": "3.0.1"
+  },
+  "devDependencies": {
+    "shx": "^0.2.2",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.9.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.5"
+  }
+}
