@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "shx rm -rf _bundles lib lib-esm",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+    "build": "npm run clean && npm run build-commonjs && npm run build-esm && npm run build-umd",
+    "build-esm": "tsc -m es6 --outDir lib-esm",
+    "build-commonjs": "tsc",
+    "build-umd": "webpack",
+    "start": "watch 'shx rm -rf lib-esm & npm run build-esm' ./src/"
   },
   "keywords": [
     "pouchdb",
@@ -22,8 +26,6 @@
     "url": "https://github.com/509dave16/ranksdb"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.109",
-    "@types/pouchdb": "^6.3.2",
     "fast-clone": "^1.5.3",
     "fast-deep-equal": "^2.0.1",
     "lodash": "^4.17.10",
@@ -34,10 +36,13 @@
     "relational-pouch": "3.0.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.109",
+    "@types/pouchdb": "^6.3.2",
     "shx": "^0.2.2",
     "ts-loader": "^4.3.0",
     "typescript": "^2.9.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
+    "watch": "^1.0.2",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.5"
   }
