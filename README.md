@@ -1,4 +1,8 @@
 # RanksDB
+## Full Example
+At the moment the `RelationalService.ts` in the following repo, is probably the best example that you can follow for how RanksDB is used.
+[ionicPouchDB repo RelationalService](https://github.com/509dave16/ionicPouchDB/blob/master/src/services/relational.service.ts)
+
 ## Summary
 This package is essentially an ORM wrapper around relational-pouch. Allowing the user to leverage the following:
 - Auto-incremented friendly Doc IDs : Any docs that are saved of any `relational-pouch` schema type will have Doc IDs automatically determined for them. A local cache of the max Doc ID for each schema type is maintained as you perform writes.
