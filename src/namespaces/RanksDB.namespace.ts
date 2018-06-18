@@ -1,9 +1,13 @@
-import {DocModel} from "../DocModel";
+import {DocModel as DocModelAlias } from "../DocModel";
 import t from 'tcomb';
-import {DocCollection} from "../DocCollection";
+import {DocCollection as DocCollectionAlias} from "../DocCollection";
 import {DataRelationsNamespace} from "./DataRelations.namespace";
-import {Database} from "../Database";
+import {Database as DatabaseAlias } from "../Database";
 export namespace RanksDB {
+
+  export type DocModel = DocModelAlias;
+  export type DocCollection = DocCollectionAlias;
+  export type Database = DatabaseAlias;
 
   export interface DatabaseConstructor {
       new (): Database;
