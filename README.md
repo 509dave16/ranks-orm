@@ -1,6 +1,6 @@
 # RanksDB
 ## Demo
-Here is a rough demo that utilizes the full example of this library mentioned below: [Ionic PouchDB](ionic-pouchdb-d0f37.firebaseapp.com)
+Here is a rough demo that utilizes the full example of this library mentioned below: [Ionic PouchDB](https://ionic-pouchdb-d0f37.firebaseapp.com)
 ## Full Example
 At the moment the `RelationalService.ts` in the following repo, is probably the best example that you can follow for how RanksDB is used.
 [ionicPouchDB repo RelationalService](https://github.com/509dave16/ionicPouchDB/blob/master/src/services/relational.service.ts)
